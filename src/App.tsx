@@ -72,7 +72,7 @@ function SocialPage() {
             <h1>Así se vive <span>la comunidad</span> en digital.</h1>
             <p>Una extensión del territorio: historias, encuentros y piezas que mantienen viva la conversación.</p>
           </div>
-          <div className="social-hero-logo"><div className="logo-card"><Logo /></div><span>✦ EN DIGITAL ✦</span></div>
+          <div className="social-hero-logo"><Logo /></div>
         </div>
       </section>
 
