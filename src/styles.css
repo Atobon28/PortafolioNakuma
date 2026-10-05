@@ -65,3 +65,47 @@ footer .brand-logo,footer a:first-child{background:var(--cream);border-radius:16
   .social-section-head h2{font-size:40px}
   .follow-box h2{font-size:40px}
 }
+
+/* Restore B&W-to-color interaction for audience cards */
+.card-image{
+  filter:grayscale(1) contrast(1.06) brightness(.94);
+  transition:transform .38s ease, filter .38s ease;
+}
+.experience-card:hover .card-image{
+  transform:scale(1.035);
+  filter:grayscale(0) contrast(1.05) saturate(1.08) brightness(1);
+}
+
+/* Make the cover image more protagonist */
+.hero-grid{
+  grid-template-columns:.82fr 1.18fr;
+  gap:54px;
+}
+.hero-copy h1{
+  font-size:clamp(56px,6.5vw,92px);
+  max-width:650px;
+}
+.hero-copy p{max-width:520px}
+.hero-collage{
+  height:680px;
+  margin-right:-28px;
+}
+.hero-photo{
+  inset:8px 0 10px 8px;
+  border-radius:40px;
+  box-shadow:20px 20px 0 var(--purple);
+  transform:rotate(1deg);
+  background-position:center;
+}
+.sticker-yellow{top:18px;right:-18px}
+.sticker-purple{left:-30px;top:300px}
+.sticker-orange{bottom:20px;right:-10px}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .hero-collage{height:590px;margin-right:0}
+}
+@media(max-width:600px){
+  .hero-collage{height:470px}
+  .hero-photo{inset:8px 2px 8px 2px}
+}
