@@ -72,7 +72,7 @@ function SocialPage() {
             <h1>Así se vive <span>la comunidad</span> en digital.</h1>
             <p>Una extensión del territorio: historias, encuentros y piezas que mantienen viva la conversación.</p>
           </div>
-          <div className="social-hero-logo"><Logo /><span>✦ EN DIGITAL ✦</span></div>
+          <div className="social-hero-logo"><div className="logo-card"><Logo /></div><span>✦ EN DIGITAL ✦</span></div>
         </div>
       </section>
 
@@ -113,7 +113,7 @@ function SocialPage() {
           <div className="stories-grid">
             <div className="story-phone"><span className="story-index">01</span><img src="/images/social-story-1.jpg" alt="Story 1" /></div>
             <div className="story-phone second"><span className="story-index">02</span><img src="/images/social-story-2.jpg" alt="Story 2" /></div>
-            <div className="story-copy"><Logo /><p>La comunicación no vive aparte del proyecto. También ayuda a conectar personas con lo que pasa en el territorio.</p><span className="story-scribble">↳ comparte · conecta · participa</span></div>
+            <div className="story-copy"><div className="story-logo-wrap"><Logo /></div><p>La comunicación no vive aparte del proyecto. También ayuda a conectar personas con lo que pasa en el territorio.</p><span className="story-scribble">↳ comparte · conecta · participa</span></div>
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ function HomePage() {
             <span className="eyebrow cream">PORTAFOLIO DE EXPERIENCIAS</span>
             <h1>El territorio<br />también <span>enseña.</span></h1>
             <p>Conectamos instituciones con experiencias reales de cultura, aprendizaje, investigación e impacto social.</p>
-            <div className="hero-actions"><a className="button black" href="#experiencias">Explorar experiencias <ArrowDownRight size={20} /></a><a className="text-link" href="#manifiesto">Conoce <img className="inline-logo" src="/images/logo-nakuma.png" alt="Nakuma" /> <ArrowRight size={18} /></a></div>
+            <div className="hero-actions"><a className="button black" href="#experiencias">Explorar experiencias <ArrowDownRight size={20} /></a><a className="text-link" href="#manifiesto">Conoce Nakuma <ArrowRight size={18} /></a></div>
           </div>
           <div className="hero-collage" aria-label="Collage comunitario"><div className="photo hero-photo" /><span className="sticker sticker-yellow">ARTE</span><span className="sticker sticker-purple">COMUNIDAD</span><span className="sticker sticker-orange">TERRITORIO</span><div className="scribble">✺</div></div>
         </div>
@@ -154,11 +154,11 @@ function HomePage() {
       <section id="manifiesto" className="manifesto section">
         <div className="wrap manifesto-grid">
           <div className="manifesto-image"><div className="photo territory-photo" /><span className="note">Personas, saberes y territorios que crean futuro.</span></div>
-          <div className="manifesto-copy"><span className="eyebrow yellow brand-eyebrow">¿QUÉ ES <img src="/images/logo-nakuma.png" alt="Nakuma" />?</span><h2>Un espacio vivo para aprender, crear y encontrarnos.</h2><p><img className="inline-logo paragraph-logo" src="/images/logo-nakuma.png" alt="Nakuma" /> impulsa procesos de arte, educación, memoria y transformación social desde la comunidad. Cada experiencia se diseña para conectar personas con saberes, historias y realidades del territorio.</p><blockquote>“No vienes solo a conocer el territorio. Vienes a construir con quienes lo habitan.”</blockquote></div>
+          <div className="manifesto-copy"><span className="eyebrow yellow">¿QUÉ ES NAKUMA?</span><h2>Un espacio vivo para aprender, crear y encontrarnos.</h2><p>Nakuma impulsa procesos de arte, educación, memoria y transformación social desde la comunidad. Cada experiencia se diseña para conectar personas con saberes, historias y realidades del territorio.</p><blockquote>“No vienes solo a conocer el territorio. Vienes a construir con quienes lo habitan.”</blockquote></div>
         </div>
       </section>
 
-      <section className="why section"><div className="wrap"><div className="why-head"><span className="eyebrow black-label brand-eyebrow">¿POR QUÉ <img src="/images/logo-nakuma.png" alt="Nakuma" />?</span><h2>Tres razones para salir del salón y entrar al territorio.</h2></div><div className="why-grid"><article><span>01</span><h3>Territorio real</h3><p>Las experiencias suceden en contextos vivos, no en escenarios simulados.</p></article><article><span>02</span><h3>Comunidad activa</h3><p>El conocimiento se construye con personas, procesos y saberes locales.</p></article><article><span>03</span><h3>A la medida</h3><p>Cada experiencia se diseña según el objetivo académico, social o corporativo.</p></article></div></div></section>
+      <section className="why section"><div className="wrap"><div className="why-head"><span className="eyebrow black-label">¿POR QUÉ NAKUMA?</span><h2>Tres razones para salir del salón y entrar al territorio.</h2></div><div className="why-grid"><article><span>01</span><h3>Territorio real</h3><p>Las experiencias suceden en contextos vivos, no en escenarios simulados.</p></article><article><span>02</span><h3>Comunidad activa</h3><p>El conocimiento se construye con personas, procesos y saberes locales.</p></article><article><span>03</span><h3>A la medida</h3><p>Cada experiencia se diseña según el objetivo académico, social o corporativo.</p></article></div></div></section>
 
       <section id="experiencias" className="experiences section"><div className="wrap"><div className="section-head"><div><span className="eyebrow purple">ELIGE CÓMO CONECTAR</span><h2>Experiencias para cada institución.</h2></div><p>Cuatro rutas. Un mismo propósito: conectar conocimiento, territorio y comunidad.</p></div><div className="cards">{audiences.map(({ id, kicker, title, copy, color, icon: Icon, image }) => <article className={`experience-card ${color}`} id={id} key={id}><div className="card-image" style={{ backgroundImage: `linear-gradient(180deg, transparent 20%, rgba(0,0,0,.68)), url(${image})` }} /><div className="card-content"><div className="card-meta"><span>{kicker}</span><Icon size={26} strokeWidth={2.2} /></div><h3>{title}</h3><p>{copy}</p><a className="card-link" href="#casos">Ver ejemplo <ArrowRight size={18} /></a></div></article>)}</div><div className="mid-cta"><p>¿Ya sabes qué tipo de experiencia necesita tu institución?</p><a className="button cream-button" href="#contacto">Construyámosla juntos <ArrowRight size={20} /></a></div></div></section>
 
@@ -168,11 +168,11 @@ function HomePage() {
 
       <section id="impacto" className="impact section"><div className="wrap impact-grid"><div className="impact-copy"><span className="eyebrow orange">LO QUE DEJA CADA EXPERIENCIA</span><h2>Más que una visita.<br />Una conexión real.</h2><ul><li>Aprendizaje situado y experiencias memorables.</li><li>Relación directa con comunidades y actores locales.</li><li>Investigación y creación desde contextos reales.</li><li>Redes, alianzas y procesos de impacto compartido.</li></ul><a className="button black impact-cta" href="#contacto">Quiero construir una experiencia <ArrowRight size={20}/></a></div><div className="impact-visual"><div className="photo impact-photo" /><span className="impact-badge">CONSTRUIR<br />JUNTOS ↗</span></div></div></section>
 
-      <section id="accion" className="action section"><div className="wrap"><div className="action-head"><span className="eyebrow purple brand-eyebrow"><img src="/images/logo-nakuma.png" alt="Nakuma" /> EN ACCIÓN</span><h2>El territorio se ve, se escucha y se vive.</h2></div><div className="gallery">{gallery.map((src, index)=><div className={`gallery-item g${index+1}`} key={src} style={{backgroundImage:`url(${src})`}}><span>{['CREAR','RECORRER','SEMBRAR','ENCONTRARNOS','APRENDER','CONECTAR'][index]}</span></div>)}</div></div></section>
+      <section id="accion" className="action section"><div className="wrap"><div className="action-head"><span className="eyebrow purple">NAKUMA EN ACCIÓN</span><h2>El territorio se ve, se escucha y se vive.</h2></div><div className="gallery">{gallery.map((src, index)=><div className={`gallery-item g${index+1}`} key={src} style={{backgroundImage:`url(${src})`}}><span>{['CREAR','RECORRER','SEMBRAR','ENCONTRARNOS','APRENDER','CONECTAR'][index]}</span></div>)}</div></div></section>
 
-      <section className="testimonial section"><div className="wrap quote-card"><span className="quote-mark">“</span><p>Aquí el aprendizaje no se queda en una diapositiva. Sale al territorio, conversa con la gente y vuelve convertido en experiencia.</p><span className="quote-caption">UNA IDEA QUE RESUME EL ESPÍRITU <img className="caption-logo" src="/images/logo-nakuma.png" alt="Nakuma" /></span></div></section>
+      <section className="testimonial section"><div className="wrap quote-card"><span className="quote-mark">“</span><p>Aquí el aprendizaje no se queda en una diapositiva. Sale al territorio, conversa con la gente y vuelve convertido en experiencia.</p><span className="quote-caption">UNA IDEA QUE RESUME EL ESPÍRITU NAKUMA</span></div></section>
 
-      <section id="contacto" className="contact section"><div className="wrap contact-box"><div><span className="eyebrow black-label">¿HABLAMOS?</span><h2>¿Qué podemos construir juntos?</h2><p>Cuéntanos qué necesita tu institución y diseñemos una experiencia con <img className="inline-logo paragraph-logo" src="/images/logo-nakuma.png" alt="Nakuma" />.</p></div><div className="contact-actions"><a className="button cream-button" href="mailto:contacto@nakuma.org">Escríbenos <ArrowRight size={20} /></a><span className="contact-note">Reemplaza este correo por el contacto oficial.</span></div></div></section>
+      <section id="contacto" className="contact section"><div className="wrap contact-box"><div><span className="eyebrow black-label">¿HABLAMOS?</span><h2>¿Qué podemos construir juntos?</h2><p>Cuéntanos qué necesita tu institución y diseñemos una experiencia con Nakuma.</p></div><div className="contact-actions"><a className="button cream-button" href="mailto:contacto@nakuma.org">Escríbenos <ArrowRight size={20} /></a><span className="contact-note">Reemplaza este correo por el contacto oficial.</span></div></div></section>
 
       <SiteFooter />
     </main>
