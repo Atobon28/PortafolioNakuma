@@ -45,3 +45,23 @@
 .nakuma-logo{width:124px;height:auto;max-height:50px;object-fit:contain;object-position:left center}
 .footer-logo{width:118px;height:auto;max-height:52px;object-fit:contain;filter:none}
 footer .brand-logo,footer a:first-child{background:var(--cream);border-radius:16px;padding:8px 12px;display:inline-flex}
+
+/* Title scale refinement */
+.hero-copy h1{font-size:clamp(60px,7.2vw,104px)}
+.manifesto-copy h2,.section-head h2,.impact-copy h2,.contact h2,.why h2,.action h2{font-size:clamp(44px,5vw,70px)}
+.card-content h3{font-size:42px}
+.case-copy h3{font-size:30px}
+.process-card h3{font-size:28px}
+.process-message{font-size:28px}
+.quote-card p{font-size:clamp(32px,4.2vw,54px)}
+.social-hero h1{font-size:clamp(58px,6.8vw,94px)}
+.social-section-head h2{font-size:clamp(42px,5vw,66px)}
+.follow-box h2{font-size:clamp(42px,5vw,64px)}
+.story-copy p{font-size:28px}
+@media(max-width:600px){
+  .hero-copy h1{font-size:54px}
+  .section h2,.contact h2{font-size:42px}
+  .social-hero h1{font-size:50px}
+  .social-section-head h2{font-size:40px}
+  .follow-box h2{font-size:40px}
+}
