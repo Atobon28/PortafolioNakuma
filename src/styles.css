@@ -22,3 +22,26 @@
 .follow-section{background:var(--yellow);border-top:3px solid var(--black)}.follow-box{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}.follow-box h2{font-family:'Permanent Marker';font-size:clamp(48px,6vw,80px);line-height:.98;margin:20px 0 0}.follow-actions{display:flex;flex-direction:column;gap:14px}.follow-actions a{background:var(--cream);border:3px solid var(--black);padding:18px 20px;font-weight:900;display:flex;align-items:center;gap:12px;justify-content:space-between}.follow-actions a:first-child{background:var(--purple);color:white}.follow-actions a:hover{transform:translateX(5px)}
 @media(max-width:900px){.social-hero-grid,.post-stage,.stories-grid,.follow-box{grid-template-columns:1fr}.social-hero-logo{min-height:260px}.stories-grid{grid-template-columns:1fr 1fr}.story-copy{grid-column:1/-1;padding:30px 0 0}.carousel-stage{min-height:560px}.carousel-side.left{left:0}.carousel-side.right{right:0}}
 @media(max-width:600px){.nakuma-logo{width:92px;height:40px}.social-hero{padding:55px 0 65px}.social-hero h1{font-size:58px}.social-hero-logo .nakuma-logo{width:190px}.social-section-head{align-items:flex-start;flex-direction:column}.stories-grid{grid-template-columns:1fr}.story-copy{grid-column:auto}.carousel-stage{min-height:430px}.carousel-side{width:40px;height:40px}.carousel-card{width:78vw}.post-note strong{font-size:29px}}
+
+/* Rounded polish */
+:root{--radius-sm:14px;--radius-md:22px;--radius-lg:30px}
+.nav-shell{border-bottom-left-radius:18px;border-bottom-right-radius:18px}
+.eyebrow,.note,.card-meta span,.case-copy>span,.quote-caption,.story-scribble{border-radius:12px}
+.hero-copy h1 span{border-radius:16px}
+.hero-photo{border-radius:36px;clip-path:none}
+.manifesto-copy blockquote{border-radius:20px}
+.territory-photo{clip-path:none;border-radius:28px}
+.why-grid article,.experience-card,.case-card,.process-card,.mid-cta,.process-message,.impact-badge,.gallery-item,.post-frame,.post-note,.carousel-card,.follow-actions a{border-radius:22px}
+.case-photo{border-top-left-radius:18px;border-top-right-radius:18px}
+.hands-photo{clip-path:none;border-radius:28px;border:3px solid var(--black)}
+.impact-photo{clip-path:none;border-radius:30px}
+.gallery-item{overflow:hidden}
+.social-hero-logo{border-radius:30px}
+.logo-card{background:var(--cream);border:3px solid var(--black);border-radius:22px;padding:18px 24px;display:flex;align-items:center;justify-content:center}
+.logo-card .nakuma-logo{width:230px;height:auto;max-height:90px;object-fit:contain;object-position:center}
+.story-logo-wrap{display:inline-flex;background:var(--cream);border:3px solid var(--black);border-radius:18px;padding:12px 16px;margin-bottom:20px}
+.story-logo-wrap .nakuma-logo{margin:0;width:150px;height:auto;max-height:60px;object-fit:contain;object-position:center}
+.brand-logo{min-width:130px}
+.nakuma-logo{width:124px;height:auto;max-height:50px;object-fit:contain;object-position:left center}
+.footer-logo{width:118px;height:auto;max-height:52px;object-fit:contain;filter:none}
+footer .brand-logo,footer a:first-child{background:var(--cream);border-radius:16px;padding:8px 12px;display:inline-flex}
