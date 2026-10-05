@@ -8,7 +8,7 @@ const audiences = [
     copy: 'Investigación aplicada, trabajo de campo, mapeos sociales y laboratorios vivos.',
     color: 'yellow',
     icon: GraduationCap,
-    image: '/images/universidades.jpg',
+    image: '/images/universidades.png',
   },
   {
     id: 'colegios',
@@ -17,7 +17,7 @@ const audiences = [
     copy: 'Experiencias pedagógicas, arte, cultura, huerta y aprendizaje situado.',
     color: 'purple',
     icon: School,
-    image: '/images/colegios.jpg',
+    image: '/images/colegios.png',
   },
   {
     id: 'empresas',
@@ -26,7 +26,7 @@ const audiences = [
     copy: 'Voluntariado corporativo, bienestar, ESG y experiencias con propósito.',
     color: 'orange',
     icon: Building2,
-    image: '/images/empresas.jpg',
+    image: '/images/empresas.png',
   },
   {
     id: 'financiero',
@@ -35,7 +35,7 @@ const audiences = [
     copy: 'Diagnóstico territorial, investigación social y proyectos de impacto.',
     color: 'cyan',
     icon: Landmark,
-    image: '/images/sector-financiero.jpg',
+    image: '/images/sector-financiero.png',
   },
 ];
 
