@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ArrowDownRight, ArrowLeft, ArrowRight, Building2, Facebook, GraduationCap, Instagram, Landmark, School, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowDownRight, ArrowLeft, ArrowRight, Building2, GraduationCap, Landmark, School, Sparkles } from 'lucide-react';
 
 const audiences = [
   { id: 'universidades', kicker: '01 / INVESTIGA', title: 'Universidades', copy: 'Investigación aplicada, trabajo de campo, mapeos sociales y laboratorios vivos.', color: 'yellow', icon: GraduationCap, image: '/images/universidades.png' },
@@ -37,7 +37,7 @@ function SiteHeader() {
           <a href="/#experiencias">Experiencias</a>
           <a href="/#como-funciona">Cómo funciona</a>
           <a href="/#impacto">Impacto</a>
-          <a href="/redes">Redes</a>
+          <a href="/#redes">Redes</a>
         </div>
         <a className="mini-cta" href="/#contacto">Conecta <ArrowRight size={16} /></a>
       </nav>
@@ -122,8 +122,8 @@ function SocialPage() {
         <div className="wrap follow-box">
           <div><span className="eyebrow black-label">SIGAMOS CONECTADOS</span><h2>El territorio también continúa en pantalla.</h2></div>
           <div className="follow-actions">
-            <a href="https://www.instagram.com/nakumacc/" target="_blank" rel="noreferrer"><Instagram /> Instagram <ArrowRight size={18}/></a>
-            <a href="https://www.facebook.com/NakumaCrea/" target="_blank" rel="noreferrer"><Facebook /> Facebook <ArrowRight size={18}/></a>
+            <a href="https://www.instagram.com/nakumacc/" target="_blank" rel="noreferrer">Instagram <ArrowRight size={18}/></a>
+            <a href="https://www.facebook.com/NakumaCrea/" target="_blank" rel="noreferrer">Facebook <ArrowRight size={18}/></a>
           </div>
         </div>
       </section>
@@ -180,7 +180,15 @@ function HomePage() {
 }
 
 function App() {
-  return window.location.pathname.startsWith('/redes') ? <SocialPage /> : <HomePage />;
+  const [view, setView] = useState(() => window.location.hash === '#redes' ? 'redes' : 'home');
+
+  useEffect(() => {
+    const syncView = () => setView(window.location.hash === '#redes' ? 'redes' : 'home');
+    window.addEventListener('hashchange', syncView);
+    return () => window.removeEventListener('hashchange', syncView);
+  }, []);
+
+  return view === 'redes' ? <SocialPage /> : <HomePage />;
 }
 
 export default App;
