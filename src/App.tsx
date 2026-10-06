@@ -132,14 +132,12 @@ function SocialPage() {
 
       <section className="stories-section section">
         <div className="wrap">
-          <div className="social-section-head">
+          <div className="social-section-head stories-head">
             <div><span className="eyebrow orange">STORIES</span><h2>Piezas pensadas para pasar rápido, pero quedarse.</h2></div>
-            <p>Formato vertical, mensajes directos y la misma energía gráfica de la marca.</p>
           </div>
           <div className="stories-grid">
             <div className="story-phone"><span className="story-index">01</span><img src="/images/social-story-1.jpg" alt="Story 1" /></div>
             <div className="story-phone second"><span className="story-index">02</span><img src="/images/social-story-2.jpg" alt="Story 2" /></div>
-            <div className="story-copy"><div className="story-logo-wrap"><Logo /></div><p>La comunicación no vive aparte del proyecto. También ayuda a conectar personas con lo que pasa en el territorio.</p><span className="story-scribble">↳ comparte · conecta · participa</span></div>
           </div>
         </div>
       </section>
@@ -195,7 +193,17 @@ function HomePage() {
 
       <section id="impacto" className="impact section"><div className="wrap impact-grid"><div className="impact-copy"><span className="eyebrow orange">LO QUE DEJA CADA EXPERIENCIA</span><h2>Más que una visita.<br />Una conexión real.</h2><ul><li>Aprendizaje situado y experiencias memorables.</li><li>Relación directa con comunidades y actores locales.</li><li>Investigación y creación desde contextos reales.</li><li>Redes, alianzas y procesos de impacto compartido.</li></ul><a className="button black impact-cta" href="#contacto">Quiero construir una experiencia <ArrowRight size={20}/></a></div><div className="impact-visual"><div className="photo impact-photo" /><span className="impact-badge">CONSTRUIR<br />JUNTOS ↗</span></div></div></section>
 
-      <section id="accion" className="action section"><div className="wrap"><div className="action-head"><span className="eyebrow purple">NAKUMA EN ACCIÓN</span><h2>El territorio se ve, se escucha y se vive.</h2></div><div className="gallery">{gallery.map((src, index)=><div className={`gallery-item g${index+1}`} key={src} style={{backgroundImage:`url(${src})`}}><span>{['CREAR','RECORRER','SEMBRAR','ENCONTRARNOS','APRENDER','CONECTAR'][index]}</span></div>)}</div></div></section>
+      <section id="accion" className="action section">
+        <div className="wrap">
+          <div className="action-head"><span className="eyebrow purple">NAKUMA EN ACCIÓN</span><h2>El territorio se vive haciendo.</h2></div>
+          <div className="action-values">
+            <article className="action-value green"><span>01</span><h3>Crear</h3><p>Arte y cultura como herramientas para activar ideas, memoria y expresión colectiva.</p></article>
+            <article className="action-value yellow"><span>02</span><h3>Aprender</h3><p>Experiencias donde el conocimiento sale del aula y se construye desde el contexto.</p></article>
+            <article className="action-value purple"><span>03</span><h3>Conectar</h3><p>Encuentros que acercan instituciones, comunidades y saberes del territorio.</p></article>
+            <article className="action-value orange"><span>04</span><h3>Transformar</h3><p>Procesos pensados para dejar capacidades, vínculos y valor compartido.</p></article>
+          </div>
+        </div>
+      </section>
 
       <section className="testimonial section"><div className="wrap quote-card"><span className="quote-mark">“</span><p>Aquí el aprendizaje no se queda en una diapositiva. Sale al territorio, conversa con la gente y vuelve convertido en experiencia.</p><span className="quote-caption">UNA IDEA QUE RESUME EL ESPÍRITU NAKUMA</span></div></section>
 
