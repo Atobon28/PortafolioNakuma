@@ -19,6 +19,7 @@ const cases = [
   { tag: 'UNIVERSIDAD', title: 'Territorio como laboratorio vivo', copy: 'Una jornada de inmersión para observar, mapear, conversar con actores locales y convertir el territorio en una fuente de preguntas reales.', image: '/images/universidades.png', className: 'case-yellow' },
   { tag: 'COLEGIO', title: 'Aprender haciendo', copy: 'Arte, huerta, memoria y cultura se convierten en una experiencia pedagógica activa para niñas, niños y jóvenes.', image: '/images/colegios.png', className: 'case-purple' },
   { tag: 'EMPRESA', title: 'Experiencias con propósito', copy: 'Equipos que salen de la oficina para encontrarse con la comunidad, trabajar juntos y generar impacto tangible.', image: '/images/empresas.png', className: 'case-orange' },
+  { tag: 'SECTOR FINANCIERO', title: 'Lectura del territorio para decidir mejor', copy: 'Una experiencia de diagnóstico territorial e investigación social para comprender comunidades, identificar necesidades y construir iniciativas de impacto con información situada.', image: '/images/sector-financiero.png', className: 'case-cyan' },
 ];
 
 const gallery = ['/images/hero.png','/images/territorio.png','/images/manos.png','/images/impacto.png','/images/colegios.png','/images/empresas.png'];
@@ -104,6 +105,31 @@ function SocialPage() {
         </div>
       </section>
 
+      <section className="youtube-section section">
+        <div className="wrap">
+          <div className="social-section-head">
+            <div><span className="eyebrow yellow">YOUTUBE</span><h2>También contamos lo que pasa en movimiento.</h2></div>
+            <p>Video, territorio y memoria para mostrar procesos, encuentros y experiencias de Nakuma.</p>
+          </div>
+          <div className="youtube-grid">
+            <div className="youtube-video">
+              <iframe
+                src="https://www.youtube.com/embed/1EY8apbJib4"
+                title="Nakuma Casa Cultural en YouTube"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            <div className="youtube-copy">
+              <span>CANAL OFICIAL</span>
+              <h3>Nakuma también se cuenta en video.</h3>
+              <p>Conoce más de sus procesos, encuentros y trabajo cultural desde el territorio.</p>
+              <a className="button black" href="https://www.youtube.com/@NakumaCC" target="_blank" rel="noreferrer">Ver canal de YouTube <ArrowRight size={18}/></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="stories-section section">
         <div className="wrap">
           <div className="social-section-head">
@@ -124,6 +150,7 @@ function SocialPage() {
           <div className="follow-actions">
             <a href="https://www.instagram.com/nakumacc/" target="_blank" rel="noreferrer">Instagram <ArrowRight size={18}/></a>
             <a href="https://www.facebook.com/NakumaCrea/" target="_blank" rel="noreferrer">Facebook <ArrowRight size={18}/></a>
+            <a href="https://www.youtube.com/@NakumaCC" target="_blank" rel="noreferrer">YouTube <ArrowRight size={18}/></a>
           </div>
         </div>
       </section>
