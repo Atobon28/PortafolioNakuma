@@ -157,3 +157,80 @@ footer .brand-logo,footer a:first-child{background:var(--cream);border-radius:16
   .case-card:nth-child(n){transform:none}
   .youtube-grid{grid-template-columns:1fr}
 }
+
+/* Final cleanup from validation feedback */
+footer .footer-grid>a:first-child{
+  background:transparent;
+  padding:0;
+  border-radius:0;
+}
+.footer-logo{
+  width:120px;
+  height:auto;
+  max-height:54px;
+  object-fit:contain;
+  filter:brightness(0) invert(1);
+}
+
+/* Stories: only the two actual pieces */
+.stories-head{margin-bottom:44px}
+.stories-head>div{max-width:860px}
+.stories-grid{
+  grid-template-columns:repeat(2,minmax(0,360px));
+  justify-content:center;
+  gap:44px;
+  align-items:start;
+}
+.story-phone{
+  width:100%;
+  max-width:360px;
+}
+.story-copy,.story-logo-wrap{display:none!important}
+
+/* Nakuma en acción without repeated imagery */
+.action-values{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:48px;
+}
+.action-value{
+  border:3px solid var(--black);
+  border-radius:22px;
+  padding:30px;
+  min-height:255px;
+  position:relative;
+}
+.action-value.green{background:var(--green)}
+.action-value.yellow{background:var(--yellow)}
+.action-value.purple{background:var(--purple);color:var(--cream)}
+.action-value.orange{background:var(--orange)}
+.action-value>span{
+  display:inline-flex;
+  width:46px;
+  height:46px;
+  align-items:center;
+  justify-content:center;
+  border:2px solid currentColor;
+  border-radius:50%;
+  font-family:'Permanent Marker';
+  font-size:18px;
+}
+.action-value h3{
+  font-family:'Permanent Marker';
+  font-size:34px;
+  margin:28px 0 12px;
+}
+.action-value p{
+  margin:0;
+  line-height:1.6;
+  font-weight:600;
+}
+@media(max-width:900px){
+  .action-values{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .stories-grid{grid-template-columns:1fr;gap:34px}
+  .story-phone{max-width:330px;margin:auto}
+  .action-values{grid-template-columns:1fr}
+}
